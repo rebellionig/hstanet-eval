@@ -50,7 +50,7 @@ jobs:
           hstanet-eval latency --target hstanet_eval.demo:dummy_model --shape 4,3,64,64 --runs 10
       - name: Upload coverage report
         if: matrix.python-version == '3.12'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: coverage-xml
           path: coverage.xml
@@ -67,7 +67,7 @@ jobs:
           cache: pip
       - run: pip install build
       - run: python -m build
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         with:
           name: dist
           path: dist/
