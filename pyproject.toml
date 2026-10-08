@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hstanet-eval"
+version = "0.1.0"
+description = "Detection metrics (IoU, AP, mAP, F1) and latency benchmarking for HSTANet video object detection experiments."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Arman" }]
+keywords = ["object-detection", "video", "metrics", "reproducibility", "research-software"]
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4", "pytest-cov>=4.1", "ruff>=0.4", "build>=1.0"]
+
+[project.scripts]
+hstanet-eval = "hstanet_eval.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/rebellionig/hstanet-eval"
+Issues = "https://github.com/rebellionig/hstanet-eval/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
