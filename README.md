@@ -1,5 +1,8 @@
 # hstanet-eval
 
+   ## Docker and CI
+   Built and tested automatically by Jenkins; image: armansalken/hstanet-eval
+
 [![CI](https://github.com/rebellionig/hstanet-eval/actions/workflows/ci.yml/badge.svg)](https://github.com/rebellionig/hstanet-eval/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
