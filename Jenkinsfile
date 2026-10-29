@@ -14,7 +14,7 @@ pipeline {
     }
 
     environment {
-        IMAGE_NAME = 'rebellionig/hstanet-eval'      // Docker Hub repository
+        IMAGE_NAME = 'armansalken/hstanet-eval'      // Docker Hub repository
         IMAGE_TAG  = "${env.BUILD_NUMBER}"
     }
 
